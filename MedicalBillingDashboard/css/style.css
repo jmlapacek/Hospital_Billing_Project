@@ -1,38 +1,77 @@
+/* Global styling */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  header {
-    background-color: #286090;
-    color: white;
-    padding: 1em;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header and Footer */
+header, footer {
+  background-color: #004080;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f5f;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
   nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 1em;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
+
+  table, thead, tbody, th, td, tr {
+    display: block;
   }
-  
-  main {
-    padding: 2em;
-  }
-  
-  footer {
+
+  th {
     background-color: #eee;
-    padding: 1em;
-    text-align: center;
-    font-size: 0.8em;
-    margin-top: 2em;
   }
-  
+}
