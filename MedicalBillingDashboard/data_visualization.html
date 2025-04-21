@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Visualization</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Medical Billing Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="patients.html">Patients</a></li>
+        <li><a href="bills.html">Bills</a></li>
+        <li><a href="payments.html">Payments</a></li>
+        <li><a href="insurance_providers.html">Insurance Providers</a></li>
+        <li><a href="data_visualization.html">Data Visualization</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Data Visualization Dashboard</h2>
+
+    <!-- 1. Outstanding Bills -->
+    <section>
+      <h3>Outstanding Bills</h3>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Bill ID</th>
+            <th>Total Due</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Grace Slick</td>
+            <td>101</td>
+            <td>$420.00</td>
+            <td>Unpaid</td>
+          </tr>
+          <tr>
+            <td>Freddy Mercury</td>
+            <td>102</td>
+            <td>$350.00</td>
+            <td>Partially Paid</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 2. Payments Received Summary -->
+    <section>
+      <h3>Payments Received</h3>
+      <p><strong>Last 30 Days:</strong> $1,250.00</p>
+      <p><strong>Last 12 Months:</strong> $18,700.00</p>
+    </section>
+
+    <!-- 3. Payment Method Breakdown (Pie Chart) -->
+    <section>
+      <h3>Payment Method Breakdown</h3>
+      <label for="paymentRange">Select Date Range:</label>
+      <select id="paymentRange">
+        <option value="7">Last 7 Days</option>
+        <option value="30" selected>Last 30 Days</option>
+        <option value="180">Last 6 Months</option>
+        <option value="365">Last Year</option>
+      </select>
+      <div style="position: relative; height: 300px; width: 100%;">
+        <canvas id="paymentPieChart"></canvas>
+      </div>
+    </section>   
+    
+    <!-- 4. Total Payments by Insurance Provider (Bar Chart) -->
+    <section>
+      <h3>Total Payments by Insurance Provider</h3>
+      <label for="insuranceRange">Select Date Range:</label>
+      <select id="insuranceRange">
+        <option value="7">Last 7 Days</option>
+        <option value="30" selected>Last 30 Days</option>
+        <option value="180">Last 6 Months</option>
+        <option value="365">Last Year</option>
+      </select>
+      <div style="position: relative; height: 300px; width: 100%;">
+        <canvas id="insurancePaymentsChart"></canvas>
+      </div>
+    </section>
+    
+
+    <!-- 5. Bill Status Distribution (Bar Chart) -->
+    <section>
+      <h3>Bill Status Overview</h3>
+      <div style="position: relative; height: 300px; width: 100%;">
+        <canvas id="billStatusBarChart"></canvas>
+      </div>
+    </section>
+        
+    <!-- 6. Revenue Growth (Line Chart) -->
+    <section>
+      <h3>Revenue Growth</h3>
+      <label for="revenueRange">Select Date Range:</label>
+      <select id="revenueRange">
+        <option value="7">Last 7 Days</option>
+        <option value="30" selected>Last 30 Days</option>
+        <option value="180">Last 6 Months</option>
+        <option value="365">Last Year</option>
+      </select>
+      <div style="position: relative; height: 300px; width: 100%;">
+        <canvas id="revenueLineChart"></canvas>
+      </div>
+    </section>
+    
+
+  <footer>
+    <p>&copy; 2025 Jahemlit Enterprises. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
