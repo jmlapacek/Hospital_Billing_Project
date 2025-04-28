@@ -1,13 +1,14 @@
 /* Global styling */
 body {
-  main {
-    padding: 20px 40px;
-  }
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
   color: #333;
   margin: 0;
   padding: 0;
+}
+
+main {
+  padding: 20px 40px;
 }
 
 /* Header and Footer */
@@ -21,7 +22,7 @@ header, footer {
 /* Navigation Bar */
 nav ul {
   list-style-type: none;
-  display: flex;a
+  display: flex;
   justify-content: center;
   padding: 0;
 }
